@@ -9,13 +9,13 @@ function App() {
 
   const selectCity = (city = null) => {
     setCity({});
-    fetch(`http://localhost:3000/v1/current/${city ? city : ""}`)
+    fetch(`http://localhost:3001/v1/current/${city ? city : ""}`)
       .then((response) => response.json())
       .then((res) => {
         console.log(res);
         setCity(res);
       });
-    fetch(`http://localhost:3000/v1/forecast/${city ? city : ""}`)
+    fetch(`http://localhost:3001/v1/forecast/${city ? city : ""}`)
       .then((response) => response.json())
       .then((res) => {
         console.log(res);

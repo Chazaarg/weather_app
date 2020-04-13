@@ -4,15 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "install-server": "npm install",
+    "install-front": "cd front && npm install",
+    "start-client": "cd front && npm start",
+    "start": "concurrently \"npm run dev\" \"npm run start-client\" ",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Patricio Chazarreta",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.24.0",
     "should": "^13.2.3"
   }
 }

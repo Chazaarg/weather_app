@@ -10,5 +10,5 @@ app.use("/v1", require("./routes"));
 //error handler
 app.use(clientErrorHandler);
 
-app.listen(3000);
-console.log("Aplicación escuchando en puerto 3000");
+app.listen(3001);
+console.log("Aplicación escuchando en puerto 3001");
